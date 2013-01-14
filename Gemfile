@@ -43,3 +43,4 @@ gem "slim-rails", "~> 1.1.0"
 gem 'rails-settings-cached', '~> 0.2.2'
 gem 'markdown-rails'
 gem 'rdiscount', '~> 1.6.8'
+gem 'jquery-elastic-rails', '~> 1.6.11'
