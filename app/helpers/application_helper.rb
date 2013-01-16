@@ -1,5 +1,6 @@
 module ApplicationHelper
   def markdown(text)
-      BlueCloth::new(text).to_html
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, :autolink => true, :space_after_headers => false)
+    markdown.render(text).html_safe
   end
 end

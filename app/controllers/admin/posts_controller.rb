@@ -18,4 +18,29 @@ class Admin::PostsController < Admin::ApplicationController
     end
   end
   
+  def edit
+    @post = Post.find(params[:id])
+  end
+  
+  def update
+    @post = Post.find(params[:id])
+    
+    if @post.update_attributes(params[:post])
+      redirect_to admin_posts_path, notice: 'Update successfully!'
+    else
+      render action: "edit"
+      flash[:alert] = 'update error!'
+    end
+  end
+  
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    
+    respond_to do |format|
+      format.html { redirect_to admin_posts_path }
+      format.json { head :no_content }
+    end
+    
+  end
 end
