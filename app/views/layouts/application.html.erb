@@ -8,9 +8,9 @@
 </head>
 <body>
   <header id= "header" class="container clearfix">
-    <a href= "index.html" id="logo">
-    	<img src = "/assets/logo.png" alt="SmartStart">
-    </a>
+    <%= link_to home_path do %>
+      <img src = "/assets/logo.png" alt="SmartStart">
+    <% end %>
     <nav id="main-nav">
       <ul>
         <li class='current'>
@@ -40,7 +40,35 @@
   <%if alert %>
   <p class="error"><strong>Error</strong> - <%= alert %></p>
   <% end %>
+  <section id='main' >
   <%= yield %>
+</section>
+    <aside id='sidebar'>
+      <div class='widget'>
+        <div class='infobox'>
+          <% if user_signed_in? %>
+          <h3>欢迎你,<%= current_user.name%>!</h3>
+          <%= link_to '注销退出', destroy_user_session_path, :class => 'button', :method => :delete %>
+          <% else %>
+          <%= link_to '登录', new_user_session_path, :class => 'button' %>
+          <%= link_to '注册', new_user_registration_path, :class => 'button' %>
+          <% end %>
+        </div>
+      </div>
+      <div class='widget'>
+        <h6 class='widget-title'>Blog Tags</h6>
+        <ul class="categories">
+          <% if @tags %>
+          <% @tags.each do |tag| %>
+        <li>
+          <a href="#"><%= tag.name %></a>
+        </li>
+        <% end %>
+        <% end %>
+      </ul>
+      </div>
+  
+    </aside>
 </section>
 
 <footer id="footer" class="clearfix">
@@ -48,17 +76,18 @@
 		<div class="three-fourth">
 			<nav id="footer-nav" class="clearfix">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="elements.html">Features</a></li>
-					<li><a href="blog.html">Blog</a></li>
-					<li><a href="portfolio-4-columns.html">Portfolio</a></li>
+					<li>
+					  <%= link_to 'HOME', home_path %>
+					</li>
+					<li><a href="elements.html">ARCHIVES</a></li>
+					<li><a href="blog.html">DOWNLOADS</a></li>
+					<li><a href="portfolio-4-columns.html">BOOKS</a></li>
 					<li><a href="contact-us.html">Contact</a></li>
 				</ul>				
 			</nav><!-- end #footer-nav -->
 			<ul class="contact-info">
-				<li class="address">012 Some Street. New York, NY, 12345. USA</li>
-				<li class="phone">(123) 456-7890</li>
-				<li class="email"><a href="mailto:contact@companyname.com">contact@companyname.com</a></li>
+				<li class="address">Beijing. China</li>
+				<li class="email"><a href="mailto:lixiaolai@gmail.com">lixiaolai@gmail.com</a></li>
 			</ul><!-- end .contact-info -->			
 		</div><!-- end .three-fourth -->
 		<div class="one-fourth last">
@@ -78,8 +107,6 @@
 	<div class="container">
 		<ul>
 			<li>Blog &copy; 2013 lixiaolai.com</li>
-			<li><a href="#">Legal Notice</a></li>
-			<li><a href="#">Terms</a></li>
 		</ul>
 	</div><!-- end .container -->
 </footer><!-- end #footer-bottom -->

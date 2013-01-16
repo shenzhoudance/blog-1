@@ -5,7 +5,14 @@ Blog::Application.routes.draw do
   devise_for :users
 
   get "home/index"
-
+  
+  resources :posts
+  
+  namespace :admin do
+    root :to => 'dashboard#index'
+    resources :posts
+    get 'dashboard/index'
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,23 @@
+<article class="entry single clearfix">
+    <%= link_to post_path(@post) do %>
+      <h1 class="title"><%= @post.title %></h1>
+    <% end %>
+      
+  	<div class="entry-body">				
+  		<%= markdown(@post.content).html_safe %>				
+  	</div><!-- end .entry-body -->
+
+  	<div class="entry-meta">
+  		<ul>
+        <li>
+          <%= link_to post_path(@post) do %>
+            <span class="post-format">Permalink</span>
+          <% end %>
+        </li>
+  			<li><span class="title">Posted:</span> <%= @post.created_at.strftime("%Y-%m-%d") %></li>
+  			<li><span class="title">Tags:</span> <a href="#">Standard</a></li>
+  			<li><span class="title">Comments:</span> <a href="#">3</a></li>
+  		</ul>
+  	</div><!-- end .entry-meta -->
+			
+</article><!-- end .entry -->

@@ -1,0 +1,13 @@
+zh:
+  activerecord:
+    models:
+      admin: '管理员'
+    attributes:
+      admin:
+        login: '用户名或邮箱'
+        name: '用户名'
+        email: '电子邮件'
+        password: '密码'
+        current_password: '当前密码'
+        password_confirmation: '密码确认'
+        remember_me: '下次自动登录'

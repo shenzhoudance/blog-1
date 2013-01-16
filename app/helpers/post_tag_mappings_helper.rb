@@ -1,0 +1,2 @@
+module PostTagMappingsHelper
+end

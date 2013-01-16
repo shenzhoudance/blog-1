@@ -1,0 +1,2 @@
+class PostTagMappingsController < ApplicationController
+end
