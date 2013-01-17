@@ -1,0 +1,6 @@
+zh:
+  devise:
+    failure:
+      user:
+        not_found_in_database: '登录信息不正确'
+    
