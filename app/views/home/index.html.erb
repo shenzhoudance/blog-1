@@ -2,11 +2,11 @@
   <% @posts.each do |post| %>
     <article class='entry clearfix'>
       <div class="entry-body">
-        <%= link_to post_path(post) do %>
+        <%= link_to slug_path(post.slug) do %>
           <h1 class="title"><%= post.title %></h1>
         <% end %>
         <p>         
-          <%= markdown(post.content) %>
+          <%= markdown(truncate(post.content, :length => 200, :separator => '......')) %>
         </p>
       </div>
       <div class="entry-meta">
@@ -32,7 +32,9 @@
       </div>
     </article>
   <% end %>
-  <%= will_paginate @posts %>
+  <div class="apple_pagination">
+      <%= will_paginate @posts, :container => false %>
+    </div>
 </section>
 
 

@@ -1,5 +1,5 @@
 <article class="entry single clearfix">
-    <%= link_to post_path(@post) do %>
+    <%= link_to slug_path(@post.slug) do %>
       <h1 class="title"><%= @post.title %></h1>
     <% end %>
       
@@ -10,7 +10,7 @@
   	<div class="entry-meta">
   		<ul>
         <li>
-          <%= link_to post_path(@post) do %>
+          <%= link_to slug_path(@post.slug) do %>
             <span class="post-format">Permalink</span>
           <% end %>
         </li>
