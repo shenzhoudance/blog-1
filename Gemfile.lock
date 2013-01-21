@@ -32,6 +32,10 @@ GEM
     bcrypt-ruby (3.0.1)
     bluecloth (2.2.0)
     builder (3.0.4)
+    ckeditor (3.7.3)
+      mime-types
+      orm_adapter
+    cocaine (0.4.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -80,6 +84,12 @@ GEM
     multi_json (1.5.0)
     mysql2 (0.3.11)
     orm_adapter (0.4.0)
+    paperclip (3.4.0)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.4.0)
+      mime-types
     polyglot (0.3.3)
     rack (1.4.3)
     rack-cache (1.2)
@@ -155,6 +165,7 @@ PLATFORMS
 
 DEPENDENCIES
   bluecloth
+  ckeditor
   coffee-rails (~> 3.2.1)
   devise (~> 2.2.1)
   friendly_id (~> 4.0.0.beta8)
@@ -164,6 +175,7 @@ DEPENDENCIES
   less-rails-bootstrap (~> 2.2.0)
   markdown-rails
   mysql2
+  paperclip
   rails (= 3.2.11)
   rails-settings-cached (~> 0.2.2)
   rdiscount (~> 1.6.8)

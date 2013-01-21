@@ -7,10 +7,20 @@
   </div>
   <div class='push' style="padding:25px;"></div>
   <div class='controls'>
-    <%= f.input :content, :required => true, :input_html => {:rows => 20, :class => 'span10'} %>
+    <%= f.input :content, :as => :ckeditor, :required => true, :input_html => { :ckeditor => {:toolbar => 'Full'} }  %>
+  </div>
+  <div class='controls'>
+    <%= f.input :slug, :required => true, :input_html => {:class => 'span7'} %>
   </div>
   <div class='push' style="padding:25px;"></div>
-    <div class='controls' style="margin-left:340px;">
+    <div class='controls' style="margin-left:180px;">
       <%= f.submit '保存', :class => 'btn btn-info' %>
     </div>
 <% end %>
+<style type='text/css'>
+  .form-horizontal .control-label{
+    text-align:left;
+    float:none;
+    padding-top:none;
+    }
+</style>

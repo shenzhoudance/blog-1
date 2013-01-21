@@ -49,3 +49,5 @@ gem 'kaminari'
 gem 'will_paginate', '~> 3.0'
 gem 'redcarpet'
 gem "friendly_id", "~> 4.0.0.beta8"
+gem "ckeditor"
+gem "paperclip"

@@ -6,7 +6,7 @@
           <h1 class="title"><%= post.title %></h1>
         <% end %>
         <p>         
-          <%= markdown(truncate(post.content, :length => 200, :separator => '......')) %>
+          <%= markdown(post.content) %>
         </p>
       </div>
       <div class="entry-meta">

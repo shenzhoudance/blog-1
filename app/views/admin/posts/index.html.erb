@@ -29,7 +29,7 @@
         <td><%= post.created_at.strftime("%Y-%m-%d") %></td>
         <td><%=  %></td>
         <td>
-          <%= link_to '查看', post_path(post), :class => 'btn btn-info' %>
+          <%= link_to '查看', slug_path(post.slug), :class => 'btn btn-info' %>
           <%= link_to '编辑', edit_admin_post_path(post), :class => 'btn btn-danger' %>
           <%= link_to '删除', [:admin, post], :method => :delete, :confirm => '真的要删除吗?', :class => 'btn btn-inverse' %>
         </td>

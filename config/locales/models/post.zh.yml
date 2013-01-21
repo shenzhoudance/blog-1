@@ -6,3 +6,4 @@ zh:
       post:
         title: '文章标题'
         content: '正文内容'
+        slug: '自定义URL'
