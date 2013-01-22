@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'http://dresssed.com/gems/6b3d892229c88d15606f'
 
 gem 'rails', '3.2.11'
 
@@ -36,3 +37,9 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+gem 'less-rails-bootstrap'
+gem 'simple_form'
+gem 'devise'
+
+#gimlet gem
+gem 'dresssed-gimlet'
