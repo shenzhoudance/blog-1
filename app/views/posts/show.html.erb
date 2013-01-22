@@ -6,18 +6,11 @@
   	<div class="entry-body">				
   		<%= markdown(@post.content).html_safe %>				
   	</div><!-- end .entry-body -->
-
-  	<div class="entry-meta">
-  		<ul>
-        <li>
-          <%= link_to slug_path(@post.slug) do %>
-            <span class="post-format">Permalink</span>
-          <% end %>
-        </li>
-  			<li><span class="title">Posted:</span> <%= @post.created_at.strftime("%Y-%m-%d") %></li>
-  			<li><span class="title">Tags:</span> <a href="#">Standard</a></li>
-  			<li><span class="title">Comments:</span> <a href="#">3</a></li>
-  		</ul>
-  	</div><!-- end .entry-meta -->
 			
 </article><!-- end .entry -->
+<style type='text/css'>
+.entry{
+  margin: -5px 100px 0 0;
+  width: 570px;
+}
+</style>

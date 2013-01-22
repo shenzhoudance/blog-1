@@ -7,7 +7,7 @@
   </div>
   <div class='push' style="padding:25px;"></div>
   <div class='controls'>
-    <%= f.input :content, :as => :ckeditor, :required => true, :input_html => { :ckeditor => {:toolbar => 'Full'} }  %>
+    <%= f.input :content, :required => true, :input_html => { :class => "redactor" }  %>
   </div>
   <div class='controls'>
     <%= f.input :slug, :required => true, :input_html => {:class => 'span7'} %>

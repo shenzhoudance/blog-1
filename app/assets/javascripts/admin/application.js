@@ -6,4 +6,4 @@
 //= require admin/sticky.min
 //= require admin/selectNav
 //= require admin/jquery_cookie.min
-//= require ckeditor/init
+//= require redactor-rails
