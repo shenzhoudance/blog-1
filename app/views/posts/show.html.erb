@@ -1,0 +1,29 @@
+<% @title = "Showing post" %>
+<div class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Title</label>
+    <div class="controls">
+      <span class="span6"><%= @post.title %></span>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label">Context</label>
+    <div class="controls">
+      <span class="span6"><%= @post.context.html_safe %></span>
+    </div>
+  </div>
+  
+  <div class="control-group">
+    <label class="control-label">Slug</label>
+    <div class="controls">
+      <span class="span6"><%= @post.slug %></span>
+    </div>
+  </div>
+  
+  <div class="form-actions">
+    <%= link_to icon_tag("pencil") + ' Edit', edit_post_path(@post), class: 'btn btn-primary' %>
+    <%= link_to 'Back', posts_path, class: 'btn' %>
+  </div>
+</div>
+

@@ -1,0 +1,21 @@
+<% content_for :javascript do %>  
+  <%= javascript_include_tag "redactor.min" %>
+  <%= javascript_include_tag "redactor_custom" %>
+<% end %>
+<% content_for :head do %>
+  <%= stylesheet_link_tag "redactor" %>
+<% end %>
+<%= simple_form_for(@post, wrapper: :bootstrap, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, :required =>true, :input_html => {:class => 'span6'} %>
+    <%= f.input :context, :required =>true, :input_html => {:row => 50}  %>
+    <%= f.input :slug, :required =>true, :input_html => {:class => 'span6'} %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= f.button :cancel, to: posts_path %>
+  </div>
+<% end %>
