@@ -1,0 +1,12 @@
+<%= simple_form_for(@user, wrapper: :bootstrap, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+    <%= f.button :cancel, to: users_path %>
+  </div>
+<% end %>

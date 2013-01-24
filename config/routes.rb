@@ -4,8 +4,19 @@ Blog::Application.routes.draw do
 
   devise_for :users
 
+  resources :tags
+  
   resources :posts
   
+  namespace :admin do
+    root :to => 'posts#index'
+    resources :users
+    resources :posts
+    resources :tags
+    get '/:slug' => 'posts#show', :as => :slug
+    post '/upload' => 'posts#upload'   
+  end
+   
   get '/:slug' => 'posts#show', :as => :slug
 
   get 'home/index' => 'home#index'

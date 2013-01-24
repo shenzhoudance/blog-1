@@ -1,0 +1,16 @@
+<% @title = "Showing user" %>
+
+<div class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label">Email</label>
+    <div class="controls">
+      <span class="span6"><%= @user.email %></span>
+    </div>
+  </div>
+  
+  <div class="form-actions">
+    <%= link_to icon_tag("pencil") + ' Edit', edit_user_path(@user), class: 'btn btn-primary' %>
+    <%= link_to 'Back', users_path, class: 'btn' %>
+  </div>
+</div>
+

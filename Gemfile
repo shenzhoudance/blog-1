@@ -41,6 +41,9 @@ gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'jquery-elastic-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'kaminari'
 
 #gimlet gem
 gem 'dresssed-gimlet'

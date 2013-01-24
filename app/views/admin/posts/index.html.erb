@@ -1,7 +1,7 @@
-<% @title = "Listing posts" %>
+<% @title = "文章列表" %>
 <% content_for :actions do %>
-  <%= link_to new_post_path, class: 'btn btn-primary btn-large pull-right' do %>
-    <%= icon_tag "plus" %> Add Post
+<%= link_to new_admin_post_path, class: 'btn btn-primary btn-large pull-right' do %>
+    <%= icon_tag "plus" %> 写文章
   <% end %>
 <% end %>
 
@@ -21,15 +21,16 @@
           <td><%= post.title %></td>
           <td><%= post.slug %></td>
           <td class="actions">
-            <%= link_to icon_tag("eye-open"), slug_path(post.slug), rel: 'tooltip', title: 'Show' %>
-            <%= link_to icon_tag("pencil"), edit_post_path(post), rel: 'tooltip', title: 'Edit' %>
-            <%= link_to icon_tag("trash"), post, rel: 'tooltip', title: 'Delete',
+            <%= link_to icon_tag("eye-open"), admin_slug_path(post.slug), rel: 'tooltip', title: 'Show' %>
+            <%= link_to icon_tag("pencil"), edit_admin_post_path(post), rel: 'tooltip', title: 'Edit' %>
+            <%= link_to icon_tag("trash"), [:admin, post], rel: 'tooltip', title: 'Delete',
                         data: { confirm: 'Are you sure?' }, method: :delete %>
           </td>
         </tr>
       <% end %>
       </tbody>
-    </table>
+    </table>   
   </div><!-- /.sheet-inner -->
 </div><!-- /.sheet -->
+<%= paginate @posts %>
 

@@ -5,17 +5,26 @@
 <% content_for :head do %>
   <%= stylesheet_link_tag "redactor" %>
 <% end %>
-<%= simple_form_for(@post, wrapper: :bootstrap, html: { class: 'form-horizontal' }) do |f| %>
+<%= simple_form_for([:admin, @post], wrapper: :bootstrap, html: { class: 'form-horizontal' }) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :title, :required =>true, :input_html => {:class => 'span6'} %>
     <%= f.input :context, :required =>true, :input_html => {:row => 50}  %>
     <%= f.input :slug, :required =>true, :input_html => {:class => 'span6'} %>
+    <div class="control-group string">
+      <label class="string control-label" for="tags">Tags</label>
+      <div class="controls">
+      <% @tags.each do |tag| %>
+      <% @is_checked = @post.tag_ids.include?(tag.id)? true : false %>
+          <%= check_box_tag "tags[]", value = "#{tag.id}", @is_checked %> <%= tag.name %>    
+      <% end %>
+      </div>
+    </div>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit %>
-    <%= f.button :cancel, to: posts_path %>
+    <%= f.button :cancel, to: admin_posts_path %>
   </div>
 <% end %>
