@@ -1,0 +1,26 @@
+<aside class="span4 sidebar notebook">
+  <img class="portrait img-polaroid" width='136' height='138' src="/assets/colorless/avatar.jpeg" />
+  <h3>
+    <span>Tags</span>
+  </h3>
+  <p>
+    <% @tags.each do |tag| %>
+    <%= link_to tag.name, tag_posts_tag_path(tag), :class => 'btn' %>
+    <% end %>
+  </p>
+  
+  <h3>
+    <span>About</span>
+  </h3>
+  <p>
+    内容待定
+  </p>
+  <h3>
+    <a class="twitter" href="http://twitter.com/xiaolai" title="Follow xiaolai on Twitter" target="_blank">
+    Twitter
+    <small>@xiaolai</small>
+    <i class="icon-share-alt pull-right"></i>
+    </a>
+  </h3>
+   
+</aside>

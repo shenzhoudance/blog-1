@@ -14,12 +14,12 @@
       </a>
 
       <!-- Le logo -->
-      <a class="brand" href="<%= root_path %>"><%= app_name %></a>
+      <a class="brand" href="<%= admin_root_path %>"><%= app_name %></a>
 
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse">
         <ul class="nav">
-          <%= activatable_li_tag_with_link "Home", root_path %>
+          <%= activatable_li_tag_with_link "网站首页", root_path %>
         </ul> <!-- /.nav -->
         
         <%= yield :navbar %>

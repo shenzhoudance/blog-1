@@ -4,7 +4,9 @@ Blog::Application.routes.draw do
 
   devise_for :users
 
-  resources :tags
+  resources :tags do
+    get 'tag_posts', :on => :member
+  end
   
   resources :posts
   
@@ -20,6 +22,10 @@ Blog::Application.routes.draw do
   get '/:slug' => 'posts#show', :as => :slug
 
   get 'home/index' => 'home#index'
+  
+  
+  root :to => 'posts#index', :as => 'root'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -69,7 +75,7 @@ Blog::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index', :as => 'root'
+   
 
   # See how all your routes lay out with "rake routes"
 
