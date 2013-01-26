@@ -81,6 +81,7 @@ class Admin::PostsController < Admin::ApplicationController
   end
   
   def upload
+    #debugger
     uploader = ImageUploader.new
     
     if uploader.store!(params[:file])

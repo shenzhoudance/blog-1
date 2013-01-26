@@ -45,5 +45,11 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
 
+group :development do
+  gem 'debugger'
+  gem 'quiet_assets'
+  gem 'puma'
+end
+
 #gimlet gem
 gem 'dresssed-gimlet'
