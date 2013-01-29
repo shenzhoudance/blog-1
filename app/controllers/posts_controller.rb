@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.order("created_at desc").page(params[:page]).per(5)
 
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
@@ -14,6 +13,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_slug(params[:slug])
+    @comments = @post.comments
+    @comment = Comment.new
 
     respond_to do |format|
       format.html # show.html.erb
