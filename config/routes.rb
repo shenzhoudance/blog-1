@@ -8,7 +8,9 @@ Blog::Application.routes.draw do
     get 'tag_posts', :on => :member
   end
   
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   
   namespace :admin do
     root :to => 'posts#index'

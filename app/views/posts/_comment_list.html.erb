@@ -1,0 +1,98 @@
+<section id='conversation' data-role='main'>
+  <div id="posts">
+    <ul id="post-list" class="post-list">
+      <% @comments.each do |comment| %>
+      <% if comment.reply_user.nil?  %>
+      <li class='post'>
+        <div class="post-content " data-role="post-content">
+          <div class="indicator"></div>
+          <div class="avatar">
+            <div class="user">
+              <img class="user" alt="Avatar" src="/assets/colorless/avatar-comment.png" />
+            </div>
+          </div>
+          <div class='post-body'>
+            <header>
+              <span class="name"><%= comment.name %></span>
+              <span class="bullet" aria-hidden="true">•</span>
+              <a class="time-ago" title="Monday, January 28 2013 5:38 PM" data-role="relative-time" href="#comment-780446315"> <%= comment.created_at.strftime("%Y-%m-%d") %> </a>
+              <a class="pull-right" href="#myModal<%= comment.id %>" data-backdrop="static" data-toggle="modal">reply</a>
+              <div id="myModal<%= comment.id %>" class="modal hide" style="display: none;" aria-hidden="true">
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal">×</button>
+                  <h3>回复 <%= comment.name %>:</h3>
+                </div>
+                 <%= simple_form_for([@post, @comment],:remote =>true) do |f| %>
+                 <%= f.hidden_field :parent_id, value:comment.id %>
+                 <%= f.hidden_field :reply_user, value:comment.name %>
+                <div class="modal-body"> 
+                  <%= f.input :name, :required =>true, :placeholder => 'Name' %>           
+                  <%= f.input :context, :required =>true, :input_html => {:rows => 7, :class =>'textarea-input_ap'} %>           
+                 </div>
+                <div class="modal-footer">
+                  <%= f.submit '提交', :class => 'btn btn-primary btn-info' %>
+                </div>
+                 <% end %>  
+              </div>
+            </header>
+            <div class="post-message-container" data-role="message-container">
+              <div class="post-message publisher-anchor-color " data-role="message">
+                <p><%= comment.context %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% comment.son_comments.each do |son_comment| %>
+        <ul class="children" data-role="children">
+          <li class='post'>
+            <div class="post-content " data-role="post-content">
+            <div class="indicator"></div>
+            <div class="avatar">
+              <div class="user">
+                <img class="user" alt="Avatar" src="/assets/colorless/avatar-comment.png" />
+              </div>
+            </div>
+            <div class='post-body' style="margin-left:30px;">
+              <header>
+                <span class="name"><%= son_comment.name %></span>
+                <span>               
+                <i class="icon-forward" title="in reply to" aria-hidden="true"></i>
+                <%= son_comment.reply_user %>
+                </span>
+                <span class="bullet" aria-hidden="true">•</span>
+                <a class="time-ago" title="Monday, January 28 2013 5:38 PM" data-role="relative-time" href="#comment-780446315"> <%= son_comment.created_at.strftime("%Y-%m-%d") %> </a>
+                <a class="pull-right" href="#myModal<%= son_comment.id %>" data-backdrop="static" data-toggle="modal">reply</a>
+                <div id="myModal<%= son_comment.id %>" class="modal hide" style="display: none;" aria-hidden="true">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">×</button>
+                    <h3>回复 <%= son_comment.name %>:</h3>
+                  </div>
+                   <%= simple_form_for([@post, @comment],:remote =>true) do |f| %>
+                   <%= f.hidden_field :parent_id, value:comment.id %>
+                   <%= f.hidden_field :reply_user, value:son_comment.name %>
+                  <div class="modal-body"> 
+                    <%= f.input :name, :required =>true, :placeholder => 'Name' %>           
+                    <%= f.input :context, :required =>true, :input_html => {:rows => 7, :class =>'textarea-input_ap'} %>           
+                   </div>
+                  <div class="modal-footer">
+                    <%= f.submit '提交', :class => 'btn btn-primary btn-info' %>
+                  </div>
+                   <% end %>  
+                </div>
+              </header>
+              <div class="post-message-container" data-role="message-container">
+                <div class="post-message publisher-anchor-color " data-role="message">
+                  <p><%= son_comment.context %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </li>
+        </ul>
+        <% end %>
+      </li>
+      <% end %>
+      <% end %>
+    </ul>
+  </div>
+</section>

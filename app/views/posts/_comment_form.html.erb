@@ -1,0 +1,10 @@
+<%= form_for([@post, @comment],:remote =>true) do |f| %>
+  <%= f.error_notification %>
+  <div class="textarea-wrapper" data-role="textarea">
+    <%= f.text_area :context, :required =>true, :class => 'textarea-input', :placeholder => 'Leave a message...' %>
+    <div class="post-actions">
+      <%= f.text_field :name, :required =>true, :placeholder => 'Name' %>
+      <%= f.button "Post", :class => 'btn submit' %>
+    </div>
+  </div>
+<% end %>

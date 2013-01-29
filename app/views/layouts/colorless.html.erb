@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <title><%= [@title, "李笑来的博客"].compact.join(" - ") %></title>
     <%= csrf_meta_tags %>
-  
+
     <meta content="#D6D6D6" name="color:Background Color">
     <meta content="#666666" name="color:Heading Background Color">
     <meta content="#3d3d3d" name="color:Text Color">
     <meta content="" name="image:Logo">
     <meta content="20" name="text:Flickr ID">
     <meta content="/assets/colorless/grid.png" name="image:Background Image">
-  
+
     <!-- Ensure devices display responsive pages properly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,20 +22,21 @@
 
     <!-- Le fonts -->
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans:400,700" %>
-  
+
     <%= stylesheet_link_tag "colorless" %>
+    <%= yield :styles %>
   </head>
   <body>
     <div class="container">
       <%= render "layouts/colorless_navbar" %>
       <%= yield %>
       <footer>
-        ©2013 Lixiaolai.com · Support by
-        Hanluner
+        ©2013 lixiaolai.com · support by
+        hanluner. themes by <a href='http://themeforest.net/item/colorless-monochrome-tumblr-theme/3327623' target='_blank'>colorless</a>
       </footer>
     </div>
     <%= javascript_include_tag "colorless" %>
   </body>
- 
-  
+
+
 <% end %>
