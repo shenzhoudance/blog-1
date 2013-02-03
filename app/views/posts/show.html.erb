@@ -13,9 +13,14 @@
            <div class="row-fluid">
               <span class="posted-on span4"><i class="social-calendar"></i><%= @post.created_at.strftime("%Y-%m-%d") %></span>
               <div class="social span8 pull-right">
-                <span class="comment-count"><i class="social-comments"></i>0 Comments</span>
-                <span class="share-on-twitter hidden-phone"><i class="social-twitter"></i>Tweet this</span>
+                <div class="comment-count span4 pull-right"><i class="social-comments"></i>
+                  <%= link_to slug_path(@post.slug, :anchor => "comment") do %>
+                    <%= @post.comments.count %> Comments
+                  <% end %>
+                </div>
+              
               </div>
+              
             </div>
           </footer>
       </article>
