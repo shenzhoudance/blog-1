@@ -23,7 +23,7 @@
     <!-- Le fonts -->
     <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=Droid+Sans:400,700" %>
     
-     <%= auto_discovery_link_tag(:rss, "http://lixiaolai.com") %>
+     <%= auto_discovery_link_tag(:rss, posts_path(:rss)) %>
      
     <%= stylesheet_link_tag "colorless" %>
     <%= yield :styles %>
