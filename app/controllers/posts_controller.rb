@@ -23,4 +23,13 @@ class PostsController < ApplicationController
     end
   end
 
+
+  def feed
+    @posts = Post.order("created_at desc")
+    
+    respond_to do |format|
+      format.html
+      format.rss { render :layout => false }
+    end
+  end
 end
