@@ -22,6 +22,8 @@ Blog::Application.routes.draw do
   end
    
   get '/:slug' => 'posts#show', :as => :slug
+  
+  get 'posts/feed' => 'posts#feed'
 
   get 'home/index' => 'home#index'
   
