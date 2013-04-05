@@ -46,7 +46,7 @@ gem 'mini_magick'
 gem 'kaminari'
 
 group :development do
-  gem 'debugger'
+# gem 'debugger'
   gem 'quiet_assets'
   gem 'puma'
 end

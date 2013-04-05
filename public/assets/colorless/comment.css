@@ -1,0 +1,301 @@
+ol, ul {
+    list-style: none outside none;
+}
+#layout {
+    overflow: hidden;
+}
+#global-nav:after {
+    clear: both;
+}
+#global-nav:before, #global-nav:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+#global-nav:before, #global-nav:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+#global-nav {
+    margin: 0 0 18px;
+}
+#global-nav li, #global-nav h4 {
+    float: left;
+}
+#global-nav li.active a {
+    color: #333333;
+    cursor: default;
+}
+#global-nav li a {
+    color: rgba(0, 0, 0, 0.3);
+}
+#global-nav li, #global-nav h4 {
+    float: left;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+#post-count, #reaction-count {
+    margin: 0 0 18px;
+}
+.postbox {
+    margin: 0 0 18px;
+    position: relative;
+}
+.postbox .avatar {
+    top: 0;
+}
+.avatar {
+    left: 0;
+    position: absolute;
+    transition: left 0.2s linear 0s;
+}
+.avatar .user {
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+.avatar .user img {
+    border-radius: 3px 3px 3px 3px;
+    display: block;
+    height: 36px;
+    width: 36px;
+}
+img {
+    border: 0 none;
+}
+.expanded .postbox .textarea-wrapper {
+    padding: 5px 0 32px;
+}
+.textarea-wrapper {
+    background-color: rgba(255, 255, 255, 0.45);
+    background-image: -moz-linear-gradient(center top , rgba(245, 245, 245, 0), rgba(255, 255, 255, 0.45));
+    background-repeat: repeat-x;
+    border: 1px solid rgba(75, 83, 94, 0.45);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) inset;
+    margin: 0 0 0 48px;
+    padding: 5px 0 0;
+    position: relative;
+    transition: all 0.2s linear 0s;
+}
+.textarea-input{
+  width: 505px;
+  height: 86px;
+  border:none;
+}
+.textarea-input_ap{
+  width: 505px;
+  height: 86px;
+}
+.expanded .postbox .post-actions {
+    opacity: 1;
+    visibility: visible;
+}
+.postbox .post-actions {
+    border-top: 1px dotted #C6CDD6;
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: opacity 0.2s linear 0s;
+    visibility: hidden;
+}
+.post-actions input {
+    background: -moz-linear-gradient(center top , #F6F6F6, #FFFFFF) repeat-x scroll 0 0 #FFFFFF;
+    border: 1px solid #C0C8D2;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) inset;
+    font-size: 13px;
+    height: 15px;
+    margin: 5px;
+    padding: 7px 8px;
+    transition: all 0.2s linear 0s;
+   
+}
+.nav {
+    border-bottom: 2px solid rgba(0, 49, 79, 0.08);
+    margin: 0 0 18px;
+    padding: 0;
+    position: relative;
+}
+.nav > ul:after {
+    clear: both;
+}
+.nav > ul:before, .nav > ul:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.nav > ul:before, .nav > ul:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.nav > ul {
+    clear: both;
+}
+.dropdown {
+    position: relative;
+}
+.nav > ul > li.active:first-child > a:after {
+    border-radius: 0 0 0 4px;
+}
+.nav > ul > li.active > a:after {
+    background: none repeat scroll 0 0 #2E9DFF;
+    bottom: -2px;
+    content: " ";
+    display: block;
+    height: 2px;
+    left: -1px;
+    position: absolute;
+    width: 112px;
+}
+.active .publisher-nav-color:after {
+    background: none repeat scroll 0 0 #666666 !important;
+}
+.nav > ul > li.active > a {
+    color: #5E5E5E !important;
+}
+.nav .dropdown-toggle {
+    background: none repeat scroll 0 0 transparent !important;
+    color: #777777 !important;
+}
+.nav .dropdown-toggle {
+    padding-right: 10px;
+    position: relative;
+}
+.nav > ul > li > a {
+    color: #777777;
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 11px 0;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    width: 110px;
+}
+#layout > section {
+    min-height: 125px;
+}
+.post-list {
+    list-style-type: none;
+    margin: 0;
+}
+
+.post-list .post:after {
+    clear: both;
+}
+.post-list .post:before, .post-list .post:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.post-list .post:before, .post-list .post:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.post-list > .post:first-child {
+    border-top: 0 none;
+    padding-top: 0;
+}
+.post-list .post {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.post-list > .post {
+    padding-left: 48px;
+}
+.post-content:after {
+    clear: both;
+}
+.post-content:before, .post-content:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.post-content:before, .post-content:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.post-list > .post:first-child > .post-content {
+    padding-top: 0;
+}
+
+.post-content {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    transition: all 0.2s ease-in-out 0s;
+}
+.post-content .post-body {
+    position: relative;
+}
+.post-list > .post:first-child > .post-content .indicator {
+    top: 0;
+}
+.post-content .indicator {
+    height: 36px;
+    position: absolute;
+}
+.post-content .post-body {
+    position: relative;
+}
+.post-content header {
+    color: #777777;
+    font-size: 12px;
+    line-height: 16px;
+    position: relative;
+}
+.post-content header a, .post-content header .name {
+    font-weight: 600;
+}
+.post-content header .bullet {
+    padding: 0 3px;
+}
+.post-content .bullet {
+    color: #CCCCCC;
+    font-size: 75%;
+    line-height: 1.4;
+    padding: 0;
+}
+.post-content header .time-ago, .post-content header .parent-link {
+    color: inherit;
+    font-size: 95%;
+    font-weight: 400;
+}
+.post-content .post-message-container {
+    position: relative;
+}
+.post-content .post-message:after {
+    clear: both;
+}
+.post-content .post-message:before, .post-content .post-message:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.post-content .post-message:before, .post-content .post-message:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.post-content .post-message p:last-child {
+    margin: 0;
+}
+.post-content .post-message p {
+    line-height: 22px;
+    margin: 0 0 9px;
+}
+.post-list .post .post .avatar .user img {
+    height: 24px;
+    width: 24px;
+}
