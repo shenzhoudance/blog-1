@@ -1,4 +1,4 @@
-<% content_for :javascript do %>  
+<% content_for :javascript do %>
   <%= javascript_include_tag "redactor" %>
   <%= javascript_include_tag "redactor_custom" %>
 <% end %>
@@ -17,7 +17,7 @@
       <div class="controls">
       <% @tags.each do |tag| %>
       <% @is_checked = @post.tag_ids.include?(tag.id)? true : false %>
-          <%= check_box_tag "tags[]", value = "#{tag.id}", @is_checked %> <%= tag.name %>    
+          <%= check_box_tag "tags[]", value = "#{tag.id}", @is_checked %> <%= tag.name %>
       <% end %>
       </div>
     </div>

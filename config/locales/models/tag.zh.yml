@@ -1,0 +1,7 @@
+zh:
+  activerecord:
+    models:
+      tag: '标签'
+    attributes:
+      tag:
+        name: '名称'

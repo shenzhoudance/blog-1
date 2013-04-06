@@ -1,5 +1,5 @@
 class Admin::PostsController < Admin::ApplicationController
-  
+
   # GET /posts
   # GET /posts.json
   def index
@@ -8,7 +8,7 @@ class Admin::PostsController < Admin::ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
-      
+
     end
   end
 
@@ -19,14 +19,14 @@ class Admin::PostsController < Admin::ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @post }      
+      format.json { render json: @post }
     end
   end
-  
+
   def new
     @post = Post.new
     @tags = Tag.all
-    
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
@@ -41,7 +41,7 @@ class Admin::PostsController < Admin::ApplicationController
   def create
     @post = Post.new(params[:post])
     tags = params[:tags]
-    
+
     respond_to do |format|
       if @post.save
         @post.tag_ids = tags
@@ -57,7 +57,7 @@ class Admin::PostsController < Admin::ApplicationController
   def update
     @post = Post.find(params[:id])
     tags = params[:tags]
-    
+
     respond_to do |format|
       if @post.update_attributes(params[:post])
          @post.tag_ids = tags
@@ -79,16 +79,16 @@ class Admin::PostsController < Admin::ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   def upload
     #debugger
     uploader = ImageUploader.new
-    
+
     if uploader.store!(params[:file])
       render :json => {:filelink => "/uploads/blog/pictures/#{params[:file].original_filename}"}
     else
-      render json: 'upload error', status: :unprocessable_entity 
+      render json: 'upload error', status: :unprocessable_entity
     end
-      
+
   end
 end

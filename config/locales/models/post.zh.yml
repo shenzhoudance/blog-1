@@ -1,0 +1,9 @@
+zh:
+  activerecord:
+    models:
+      post: '文章'
+    attributes:
+      post:
+        title: '文章标题'
+        context: '正文'
+        slug: '自定义url'
