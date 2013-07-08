@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :context, :slug, :title
+  attr_accessible :content, :slug, :title
   #mount_uploader :file, ImageUploader
 
   has_many :post_tag_mappings
