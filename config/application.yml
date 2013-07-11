@@ -1,13 +1,9 @@
 defaults: &defaults
   blog:
-    blog_name: 没有船的海贼
-  neat_setting: 24
-  awesome_setting: <%= "Did you know 5+5 = #{5+5}" %>
-  messages:
+    blog_name: "汗仑尔的博客"
 
 development:
   <<: *defaults
-  neat_setting: 800
 
 test:
   <<: *defaults

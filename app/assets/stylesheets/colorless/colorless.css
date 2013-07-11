@@ -45,7 +45,7 @@
           .navbar-static-top .container,
           .navbar-fixed-top .container,
           .navbar-fixed-bottom .container {
-            max-width: 900px;
+            max-width: 960px;
           }
           .navbar{
             margin: 20px 0;
