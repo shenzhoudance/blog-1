@@ -15,7 +15,7 @@ default: &default
   reconnect: false
   pool: 5
   username: root
-  password: myroot
+  password: 
   #socket: /var/run/mysqld/mysqld.sock
   socket: /tmp/mysql.sock
 

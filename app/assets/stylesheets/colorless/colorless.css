@@ -103,10 +103,10 @@
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 102, 102, 0.2);
           }
 
-          
+
           .navbar h1 a.brand.logo{
-            max-width: 200px;
-            max-height: 50px;
+            max-width: 290px;
+            max-height: 80px;
             overflow: hidden;
             opacity: 0.8;
           }
@@ -118,7 +118,7 @@
           .navbar h1 a.brand.logo:hover{
             opacity: 1;
           }
-          
+
 
           /**
            * Content
@@ -746,7 +746,7 @@
 
           .loading{
             background-repeat: no-repeat;
-            background-position: 50% 50%;           
+            background-position: 50% 50%;
             display:block;
             margin-bottom: 10px;
             height: 40px;

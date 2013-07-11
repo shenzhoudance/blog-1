@@ -44,6 +44,8 @@ gem 'jquery-elastic-rails'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'kaminari'
+gem 'slim'
+gem 'settingslogic'
 
 group :development do
 # gem 'debugger'
