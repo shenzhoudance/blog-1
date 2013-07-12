@@ -34,7 +34,7 @@ module Blog
     # config.i18n.default_locale = :de
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml')]
     config.i18n.default_locale = :zh
-    #config.assets.precompile += %w( *.js *.css )
+    config.assets.precompile += %w( *.js *.css )
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
