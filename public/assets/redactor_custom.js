@@ -1,1 +1,0 @@
-$(document).ready(function(){var e=$("meta[name=csrf-param]").attr("content"),t=$("meta[name=csrf-token]").attr("content"),n={};n[e]=t,$("#post_context").redactor({imageUpload:"/admin/upload",minHeight:600,uploadFields:n})});

@@ -1,1 +1,0 @@
-!function(e){e(function(){function s(){var e,s=t.scrollTop();s>=r&&!i?(i=1,n.addClass("bar-fixed")):s<=r&&i&&(i=0,n.removeClass("bar-fixed"))}var t=e(window),n=e("header hr"),r=e("header hr").length&&e("header hr").offset().top-58,i=0;!e("header .navbar").hasClass("navbar-fixed-top")||(e("header #featured")[0]?(s(),t.on("scroll",s)):n.addClass("bar-fixed"))})}(window.jQuery);
